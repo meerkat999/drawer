@@ -12,7 +12,7 @@ public class DrawerConsoleMain {
   public static void main(String[] args) {
     DrawerManager drawerManager = new DrawerManager(new ConsoleDrawer());
     Scanner scanner = new Scanner(System.in);
-    System.out.print("Command: ");
+    System.out.print("enter command: ");
     while (scanner.hasNextLine()) {
       String params = scanner.nextLine();
       if (params.length() != 0 && params.charAt(0) == 'Q') {
@@ -24,7 +24,7 @@ public class DrawerConsoleMain {
       } catch (GraphicalException | InputException e) {
         System.out.println("It couldn't be printed");
       }
-      System.out.print("Command: ");
+      System.out.print("enter command: ");
     }
     scanner.close();
   }
